@@ -14,7 +14,7 @@ import (
 	"strings"
 )
 
-func GetFastestRoute(c *gin.Context) {
+func GetFastestRoutes(c *gin.Context) {
 	src, err := parseSrc(c)
 	if err != nil {
 		handleError(c, http.StatusBadRequest, err)
@@ -27,7 +27,7 @@ func GetFastestRoute(c *gin.Context) {
 		return
 	}
 
-	osrmRoutes, err := osrmclient.GetShortestDistance(context.Background(), src, dst)
+	osrmRoutes, err := osrmclient.GetDistance(context.Background(), src, dst)
 	if err != nil {
 		handleError(c, http.StatusInternalServerError, err)
 		return

@@ -8,7 +8,7 @@ import (
 
 const osrmURL = "https://router.project-osrm.org"
 
-func GetShortestDistance(ctx context.Context, src geo.Point, dst []geo.Point) ([]osrm.Route, error) {
+func GetDistance(ctx context.Context, src geo.Point, dst []geo.Point) ([]osrm.Route, error) {
 	client := osrm.NewFromURL(osrmURL)
 	var routes []osrm.Route
 	for _, d := range dst {

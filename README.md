@@ -4,7 +4,7 @@
 `Make server` will start a simple rest server on port :8080
 
 ### API spec </br> 
-* `GET /routes`  returns the fastest duration with car between a source and multiple destinations. 
+* `GET /routes`  returns the fastest duration with car between a source point and multiple destinations. 
 
     Query Params:
   - `src` - source location (customer's home), only one can be provided.

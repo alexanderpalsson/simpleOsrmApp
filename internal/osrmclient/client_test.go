@@ -12,7 +12,7 @@ func TestGetDistance(t *testing.T) {
 	src := *geo.NewPoint(13.388860, 52.517037)
 	dst := []geo.Point{*geo.NewPoint(13.428555, 52.523219), *geo.NewPoint(13.397634, 52.529407)}
 
-	routes, err := GetShortestDistance(context.Background(), src, dst)
+	routes, err := GetDistance(context.Background(), src, dst)
 	require.NoError(t, err)
 
 	require.Equal(t, float32(3804.3), routes[0].Distance)

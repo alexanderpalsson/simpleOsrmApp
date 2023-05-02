@@ -11,7 +11,7 @@ import (
 func TestPingRoute(t *testing.T) {
 	r := gin.Default()
 
-	r.GET("/routes", GetFastestRoute)
+	r.GET("/routes", GetFastestRoutes)
 
 	w := httptest.NewRecorder()
 	req, _ := http.NewRequest("GET", "http://your-service/routes?src=13.388860,52.517037&dst=13.397634,52.529407&dst=13.428555,52.523219", nil)
