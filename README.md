@@ -15,3 +15,5 @@ Example query: `http://localhost:8080/routes?src=13.388860,52.517037&dst=13.4285
 
 # Run tests
 `Make test-unit` will run all unit-tests
+
+Test
